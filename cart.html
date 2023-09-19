@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+
+      <a href="#" class="logo">
+        <ion-icon name="fast-food"></ion-icon>
+        To Pie For
+      </a>
+      
+      <div class="boxx">
+        <div class="cart-count">0</div>
+        <ion-icon name="cart" id="cart-icon"></ion-icon>
+      </div>
+
+      <div class="cart">
+        <div class="cart-title">Cart Items</div>
+        <div class="cart-content">
+        </div>
+
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">Rs.0</div>
+        </div>
+        <a href="./checkout.html">
+          <button class="btn-buy"> Place Order</button>
+        </a>
+        <ion-icon name="close" id="cart-close"></ion-icon>
+
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <p class="section-subtitle">Our Products</p>
+    <!-- Filter Start -->
+    <div class="control">
+ 
+      <div class="btn-group">
+        <button class="btn btn-clicked" data-filter="all">All</button>
+        <button class="btn" data-filter="muffins">Muffins</button>
+        <button class="btn" data-filter="cake">Cake</button>
+        <button class="btn" data-filter="brownies">Brownies</button>
+        <button class="btn" data-filter="bread">Bread</button>
+        <button class="btn" data-filter="pancake">Pancake</button>
+      </div>
+    
+      <input type="text" placeholder="search for products" id="search">
+    </div>
+     <!-- Filter Start -->
+    <div class="shop-content" >
+
+      <div class="box" data-item="bread">
+        <div class="pic">
+          <img src="./img/Bread.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Focaccia Bread</h2>
+        <span class="food-price">R67.40</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn"></ion-icon>
+      </div>
+
+
+      <div class="box" data-item="muffins">
+        <div class="pic">
+          <img src="./img/Muffin2.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Chocolate Vannila Muffins</h2>
+        <span class="food-price">R140.05</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn1"></ion-icon>
+      </div>
+
+      <div class="box" data-item="pancake">
+        <div class="pic">
+          <img src="img/close-up-crepes-with-cream-strawberries.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">French Crêpes</h2>
+        <span class="food-price">R40.00</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn2"></ion-icon>
+      </div>
+
+      <div class="box" data-item="cake">
+        <div class="pic">
+          <img src="./img/Cake1.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Vannila Carrot Cake</h2>
+        <span class="food-price">R200.00</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn3"></ion-icon>
+      </div>
+
+      <div class="box" data-item="brownies">
+        <div class="pic">
+          <img src="./img/Brownies1.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Brownie</h2>
+        <span class="food-price">R78.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn4"></ion-icon>
+      </div>
+
+      <div class="box" data-item="pancake">
+        <div class="pic">
+          <img src="./img/Pancake2.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Honey Pancakes</h2>
+        <span class="food-price">R150.00</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn5"></ion-icon>
+      </div>
+
+
+      <div class="box" data-item="bread">
+        <div class="pic">
+          <img src="img/Bread2.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Swiss Roll</h2>
+        <span class="food-price">R95.00</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn6"></ion-icon>
+      </div>
+
+
+      <div class="box" data-item="muffins">
+        <div class="pic">
+          <img src="./img/Muffin4.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Duey Muffins</h2>
+        <span class="food-price">R145.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn7"></ion-icon>
+      </div>
+
+      <div class="box" data-item="cake">
+        <div class="pic">
+          <img src="./img/Cake2.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Daiel Chocolate Cake</h2>
+        <span class="food-price">R345.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn8"></ion-icon>
+      </div>
+
+      <div class="box" data-item="bread">
+        <div class="pic">
+          <img src="./img/Bread1.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Wheat Bread</h2>
+        <span class="food-price">R75.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn9"></ion-icon>
+      </div>
+
+      <div class="box" data-item="muffins">
+        <div class="pic">
+          <img src="./img/Muffin3.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">Vannila rolyn muffins</h2>
+        <span class="food-price">R89.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn10"></ion-icon>
+      </div>
+
+      <div class="box" data-item="cake">
+        <div class="pic">
+          <img src="./img/Cake3.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">White Loaf</h2>
+        <span class="food-price">R45.25</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+        <ion-icon name="eye-outline" class="view-ingriedients" id="myBtn11"></ion-icon>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!----------------------------------------------- The Modal 1 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 1 End--------------------------------->
+  <!----------------------------------------------- The Modal 2 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close1">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 2 End--------------------------------->
+  <!----------------------------------------------- The Modal 3 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close2">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 3 End--------------------------------->
+  <!----------------------------------------------- The Modal 4 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close3">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 4 End--------------------------------->
+  <!----------------------------------------------- The Modal 5 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close4">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 5 End--------------------------------->
+  <!----------------------------------------------- The Modal 6 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close5">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 6 End--------------------------------->
+  <!----------------------------------------------- The Modal 7 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close6">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 7 End--------------------------------->
+  <!----------------------------------------------- The Modal 8 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close7">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 8 End--------------------------------->
+  <!----------------------------------------------- The Modal 9 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close8">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 9 End--------------------------------->
+  <!----------------------------------------------- The Modal 10 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close9">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 10 End--------------------------------->
+  <!----------------------------------------------- The Modal 11 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close10">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 11 End--------------------------------->
+  <!----------------------------------------------- The Modal 12 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close11">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 12 End--------------------------------->
+  <!----------------------------------------------- The Modal 13 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close12">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 13 End--------------------------------->
+  <!----------------------------------------------- The Modal 14 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close13">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 14 End--------------------------------->
+  <!----------------------------------------------- The Modal 15 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close14">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 15 End--------------------------------->
+  <!----------------------------------------------- The Modal 16 Start--------------------------------->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close15">&times;</span>
+        <h2>Ingredients</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Nutritional Value</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h2>Warnings<ion-icon name="warning-outline"></ion-icon></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+    </div>
+
+  </div>
+  <!----------------------------------------------- The Modal 16 End--------------------------------->
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
